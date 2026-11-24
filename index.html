@@ -2,14 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kim Aeriel | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kim Aeriel Fonseca | Portfolio</title>
+  <meta name="description" content="Portfolio of Kim Aeriel Fonseca, Computer Science student and web developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Background: stars (light) + aurora (dark) -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="stars" id="stars"></div>
+    <div class="aurora"><span></span><span></span><span></span><span></span></div>
+  </div>
 
-  <h1>Hello, I'm Kim Aeriel</h1>
-  <p>This is my portfolio.</p>
+  <div class="app">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">
+          <span>KF</span>
+          <!-- Put your photo at images/profile.jpg -->
+          <img src="images/profile.jpg" alt="Kim Aeriel Fonseca" onerror="this.remove()">
+        </div>
+        <h1 class="name">Kim Aeriel Fonseca</h1>
+        <p class="handle">@Aevielle</p>
+
+        <div class="socials">
+          <a class="icon-btn" href="https://github.com/Aevielle" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+          <a class="icon-btn text-icon" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a class="icon-btn text-icon" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a class="icon-btn" href="mailto:you@example.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </a>
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main">
+        <a href="#home" class="nav-link" data-page="home">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v10a1 1 0 01-1 1h-5v-7H9v7H4a1 1 0 01-1-1z"/></svg>
+          Home
+        </a>
+        <a href="#projects" class="nav-link" data-page="projects">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          Projects
+        </a>
+        <a href="#about" class="nav-link" data-page="about">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>
+          About
+        </a>
+      </nav>
+
+      <p class="copyright">&copy; <span id="year">2026</span> Kim Aeriel Fonseca.<br>All rights reserved.</p>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main">
+
+      <!-- ---------- HOME ---------- -->
+      <section class="page" id="page-home" data-page="home">
+        <div class="page-head">
+          <div>
+            <h2 class="display">Code it once. Make it count.</h2>
+            <p class="lede">I'm a Computer Science student building web apps and data tools that solve real problems.</p>
+          </div>
+          <a class="pill-btn" href="mailto:you@example.com">Contact me</a>
+        </div>
+
+        <!-- Daily drivers (moving carousel) -->
+        <div class="drivers">
+          <div class="drivers-label">
+            <span class="eyebrow">Daily drivers</span>
+            <strong>Tools I work with</strong>
+          </div>
+          <div class="marquee" aria-label="Tools I work with">
+            <div class="marquee-track" id="toolsTrack"></div>
+          </div>
+        </div>
+
+        <!-- Bento grid -->
+        <div class="bento">
+          <article class="card card-intro">
+            <div class="intro-photo">
+              <span>KF</span>
+              <img src="images/profile.jpg" alt="" onerror="this.remove()">
+            </div>
+            <p class="small-label">Hi, I'm</p>
+            <h3 class="intro-name">Kim Aeriel Fonseca</h3>
+            <p class="intro-line">3rd-year BSCS student<br>Philippines</p>
+          </article>
+
+          <a class="card card-link card-projects" href="#projects">
+            <div class="card-head">
+              <span class="badge"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span>
+              <h3>Projects</h3>
+            </div>
+            <p class="muted">Apps and data work I've built for class and on my own.</p>
+            <ul class="mini-list" id="homeProjects"></ul>
+          </a>
+
+          <article class="card card-focus">
+            <div class="card-head">
+              <span class="badge"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span>
+              <h3>Focus</h3>
+            </div>
+            <p class="muted">Web development and data integration.</p>
+            <span class="tag tag-dark">Open to internships</span>
+          </article>
+
+          <a class="card card-link card-about" href="#about">
+            <div class="card-head">
+              <span class="badge"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span>
+              <h3>About me</h3>
+            </div>
+            <p class="muted">Who I am, what I study, and what I'm learning next.</p>
+            <ul class="mini-list">
+              <li><span>Student</span><em>BSCS</em></li>
+              <li><span>Location</span><em>Philippines</em></li>
+              <li><span>Learning</span><em>Full-stack</em></li>
+            </ul>
+          </a>
+        </div>
+      </section>
+
+      <!-- ---------- PROJECTS ---------- -->
+      <section class="page" id="page-projects" data-page="projects">
+        <div class="page-head">
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h2 class="display">Things I've built and shipped.</h2>
+            <p class="lede">Open a card to see the code or the live site.</p>
+          </div>
+        </div>
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <!-- ---------- ABOUT ---------- -->
+      <section class="page" id="page-about" data-page="about">
+        <div class="page-head">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2 class="display">Hi, I'm Kim.</h2>
+            <p class="lede">I like turning messy problems into tidy, working software.</p>
+          </div>
+        </div>
+
+        <div class="about-card card">
+          <div class="about-text">
+            <h3 class="about-statement">I'm a third-year Computer Science student who learns by building.</h3>
+            <p class="muted">Replace this paragraph with a short story about you: what got you into code, what you enjoy working on, and what kind of work you're looking for.</p>
+
+            <ul class="role-list" id="roleList"></ul>
+          </div>
+          <div class="about-photo">
+            <span>KF</span>
+            <img src="images/profile.jpg" alt="" onerror="this.remove()">
+          </div>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><strong>Kim Aeriel Fonseca</strong><span>3 BSCS-1</span></div>
+          <div class="fact"><strong>Based in the Philippines</strong><span>GMT+8</span></div>
+          <a class="fact" href="https://github.com/Aevielle" target="_blank" rel="noopener"><strong>GitHub</strong><span>github.com/Aevielle</span></a>
+          <a class="fact" href="mailto:you@example.com"><strong>Email</strong><span>you@example.com</span></a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 
   <script src="js/main.js"></script>
 </body>
